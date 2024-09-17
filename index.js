@@ -41,7 +41,7 @@ app.get("/:endpoint", async (req, res) => {
   }
 });
 
-app.post("/get/endpoint", async (req, res) => {
+app.get("/get/endpoint", async (req, res) => {
   const url = req.query.url;
   const randomEndpoint = await getEndpoint();
   const result = await collection.findOne({ url: url });
